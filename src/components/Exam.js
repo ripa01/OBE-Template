@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import SubjectiveQuestionModal from './SubjectiveQuestionModal';
 
 const Exam = () => {
   // Default values
@@ -8,6 +9,16 @@ const Exam = () => {
     date: "2.04.24"
   };
   const totalQuestions = 10; // Example value
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <div className="max-w-7xl mx-auto my-2 p-4">
@@ -22,9 +33,9 @@ const Exam = () => {
 
           <button
             className="mt-2 bg-white text-primary px-4 py-2 font-bold rounded-lg hover:bg-gray-200"
-            // onClick={openEditModal}
+            
           >
-            Edit Question
+            Edit Exam
           </button>
         </div>
       </div>
@@ -35,15 +46,17 @@ const Exam = () => {
             <h1 className="text-3xl font-bold">Questions</h1>
             <button
               className="bg-primary text-white font-bold py-2 px-4 rounded-md hover:bg-secondary"
-              onClick={() => console.log('Add new question')}
+              onClick={openModal}
             >
-              Add Question
+              Add Questions
             </button>
           </div>
           {/* Here you would map through actual questions, but I'm omitting it for brevity */}
         </div>
       </div>
 
+      {/* Modal for Subjective Question */}
+      <SubjectiveQuestionModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };
