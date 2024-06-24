@@ -272,7 +272,7 @@ export default function Calender() {
         <div className="relative bg-gray-50 px-3 py-2 text-gray-500">
           <time datetime="2022-02-03">3</time>
         </div>
-        <div className="relative bg-gray-50 px-3 py-2 text-gray-500">
+        {/* <div className="relative bg-gray-50 px-3 py-2 text-gray-500">
           <time datetime="2022-02-04">4</time>
           <ol className="mt-2">
             <li>
@@ -282,7 +282,7 @@ export default function Calender() {
               </a>
             </li>
           </ol>
-        </div>
+        </div> */}
         <div className="relative bg-gray-50 px-3 py-2 text-gray-500">
           <time datetime="2022-02-05">5</time>
         </div>
