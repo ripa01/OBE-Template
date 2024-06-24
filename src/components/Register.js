@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Navbar02 from './Navbar02';
+
 
 export default function Register() {
   return (
     <body class="font-poppins h-screen w-screen flex flex-col">
-    <Navbar02 />
+  
     <div
         id="body"
         class="h-full lg:mx-24 flex flex-col items-center justify-center"
@@ -93,7 +93,7 @@ export default function Register() {
                         <p class="mt-2 text-grey-500 text-sm">
                             Already have an account?
                             <Link
-                                to="/login"
+                                to="/"
                                 class="text-primary font-bold hover:text-secondary"
                             >
                                 Login here.
