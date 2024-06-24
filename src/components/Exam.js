@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SubjectiveQuestionModal from './SubjectiveQuestionModal';
+import Navbar from './Navbar';
 
 const Exam = () => {
   // Default values
@@ -21,6 +22,8 @@ const Exam = () => {
   };
 
   return (
+    <>
+    <Navbar />
     <div className="max-w-7xl mx-auto my-2 p-4">
       <div className="card bg-indigo-100 w-full rounded-xl text-black font-bold border-2 border-black">
         <div className="px-8 pt-16 pb-8">
@@ -58,6 +61,7 @@ const Exam = () => {
       {/* Modal for Subjective Question */}
       <SubjectiveQuestionModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
+    </>
   );
 };
 
