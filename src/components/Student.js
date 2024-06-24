@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
 
 const Student = () => {
   // Dummy data for students
@@ -12,11 +13,13 @@ const Student = () => {
   ];
 
   return (
+    <>
+    <Navbar />
     <div className="max-w-7xl mx-auto my-2 p-4">
       <div className="card bg-indigo-100 w-full rounded-xl text-black font-bold border-2 border-black">
         <div className="px-8 pt-16 pb-8">
           <h1 className="text-3xl font-bold">Enrollment For CSE 401</h1>
-          <p className="text-md mt-2 text-gray-200">Course - Machine Learning</p>
+          <p className="text-md mt-2 text-black">Course - Machine Learning</p>
           <p className="mt-1 mb-4">Total students: {students.length}</p>
 
           <button className="mt-2 mr-5 bg-primary text-white px-4 py-2 font-bold rounded-lg hover:bg-gray-200">
@@ -77,6 +80,7 @@ const Student = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

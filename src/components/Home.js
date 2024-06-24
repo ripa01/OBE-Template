@@ -30,7 +30,7 @@ export default function Home() {
               </div>
               <div className="bg-primary shadow-xl rounded-xl h-48 w-full">
                 <div className="teacherClassCard h-full bg-indigo-100 rounded-xl origin-bottom-left hover:-rotate-6 transition-all duration-300 border-2 border-black">
-                  <Link to="/academic-calendar" className="block h-full">
+                  <Link to="/calendar" className="block h-full">
                     <div className="p-10 justify-center items-center flex flex-col h-full">
                       <h1 className="font-bold text-center">Academic Calendar</h1>
                     </div>
@@ -39,7 +39,7 @@ export default function Home() {
               </div>
               <div className="bg-primary shadow-xl rounded-xl h-48 w-full">
                 <div className="teacherClassCard h-full bg-indigo-100 rounded-xl origin-bottom-left hover:-rotate-6 transition-all duration-300 border-2 border-black">
-                  <Link to="/dashboard" className="block h-full">
+                  <Link to="/view" className="block h-full">
                     <div className="p-10 justify-center items-center flex flex-col h-full">
                       <h1 className="font-bold text-center">Dashboard</h1>
                     </div>

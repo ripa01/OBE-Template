@@ -165,7 +165,7 @@ export default function Home02({
                           key={exam.id}
                           className={`upcomingExamCard group card text-black rounded-xl bg-indigo-100 hover:bg-secondary hover:-translate-y-2 transition duration-300 ease-in-out overflow-hidden border-2 border-black`}
                         >
-                          <a href="/">
+                          <Link to="/student">
                             <div className="flex flex-col p-4 h-48 w-full text-black truncate">
                               <div>{exam.type}</div>
                               <div className="w-full mt-auto">
@@ -185,7 +185,7 @@ export default function Home02({
                                 </p>
                               </div>
                             </div>
-                          </a>
+                          </Link>
                         </div>
                       ))
                     ) : (
