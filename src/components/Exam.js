@@ -5,8 +5,8 @@ const Exam = () => {
   // Default values
   const examName = "CT 01";
   const classDetails = {
-    name: "Machine learning First CT",
-    date: "2.04.24"
+    name: "Machine learning",
+    date: "27-07-24"
   };
   const totalQuestions = 10; // Example value
 
@@ -22,17 +22,17 @@ const Exam = () => {
 
   return (
     <div className="max-w-7xl mx-auto my-2 p-4">
-      <div className="card bg-primary w-full rounded-xl text-white font-bold border-2 border-black">
+      <div className="card bg-indigo-100 w-full rounded-xl text-black font-bold border-2 border-black">
         <div className="px-8 pt-16 pb-8">
           <h1 className="text-3xl font-bold">{examName}</h1>
-          <p className="text-md mt-2 text-gray-200">{classDetails.name}</p>
-          <p className="text-md mt-1 text-gray-200">
-            Date - {classDetails.date}
+          <p className="text-md mt-2 text-black">{classDetails.name}</p>
+          <p className="text-md mt-1 text-black">
+            Date : {classDetails.date}
           </p>
           <p className="mt-1 mb-4">Total questions: {totalQuestions}</p>
 
           <button
-            className="mt-2 bg-white text-primary px-4 py-2 font-bold rounded-lg hover:bg-gray-200"
+            className="mt-2 bg-primary text-white px-4 py-2 font-bold rounded-lg hover:bg-gray-200"
             
           >
             Edit Exam
