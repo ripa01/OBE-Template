@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-// import Navbar02 from './Navbar02';
 import logo from "../image/logo02.png";
 
 export default function Login() {
@@ -8,13 +7,11 @@ export default function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Perform your login logic here, then navigate to the home page
-    navigate('/view');
+    navigate('/home');
   };
 
   return (
     <body className="font-poppins h-screen w-screen flex flex-col bg-white">
-      {/* <Navbar02 /> */}
       <div id="body" className="h-full lg:mx-24 flex flex-col items-center justify-center">
         <div className="flex flex-col justify-around items-center gap-8 mb-16">
           <div id="registerForm" className="h-full col-span-2 flex flex-col justify-center bg-indigo-100 rounded-2xl px-4 py-8 shadow-xl border-2 border-black">
