@@ -36,10 +36,10 @@ export default function Home02() {
                   </button>
                 </div>
               </div>
-              {/* Course Cards */}
-              <div className="bg-tertiary shadow-xl rounded-xl h-48 w-full">
-                <div className="teacherClassCard h-full bg-rose-100 rounded-xl origin-bottom-left hover:-rotate-6 transition-all duration-300 border-2 border-black">
-                  <Link to="/course">
+              {/* Course Card 1 */}
+              <div className="bg-primary shadow-xl rounded-xl h-48 w-full">
+                <div className="teacherClassCard h-full bg-indigo-100 rounded-xl origin-bottom-left hover:-rotate-6 transition-all duration-300 border-2 border-black">
+                  <Link to="/course" className="block h-full">
                     <div className="p-4 flex flex-col h-full">
                       <p className="">CSE 301</p>
                       <h1 className="mt-auto font-bold">Machine Learning</h1>
@@ -47,9 +47,11 @@ export default function Home02() {
                   </Link>
                 </div>
               </div>
-              <div className="bg-tertiary shadow-xl rounded-xl h-48 w-full">
-                <div className="teacherClassCard h-full bg-rose-100 rounded-xl origin-bottom-left hover:-rotate-6 transition-all duration-300 border-2 border-black">
-                  <Link to="/view">
+              
+              {/* Course Card 2 */}
+              <div className="bg-primary shadow-xl rounded-xl h-48 w-full">
+                <div className="teacherClassCard h-full bg-indigo-100 rounded-xl origin-bottom-left hover:-rotate-6 transition-all duration-300 border-2 border-black">
+                  <Link to="/view" className="block h-full">
                     <div className="p-4 flex flex-col h-full">
                       <p className="">CSE 302</p>
                       <h1 className="mt-auto font-bold">Data Structures</h1>
@@ -57,9 +59,11 @@ export default function Home02() {
                   </Link>
                 </div>
               </div>
-              <div className="bg-tertiary shadow-xl rounded-xl h-48 w-full">
-                <div className="teacherClassCard h-full bg-rose-100 rounded-xl origin-bottom-left hover:-rotate-6 transition-all duration-300 border-2 border-black">
-                  <Link to="/view">
+              
+              {/* Course Card 3 */}
+              <div className="bg-primary shadow-xl rounded-xl h-48 w-full">
+                <div className="teacherClassCard h-full bg-indigo-100 rounded-xl origin-bottom-left hover:-rotate-6 transition-all duration-300 border-2 border-black">
+                  <Link to="/view" className="block h-full">
                     <div className="p-4 flex flex-col h-full">
                       <p className="">CSE 303</p>
                       <h1 className="mt-auto font-bold">Algorithms</h1>
@@ -67,6 +71,7 @@ export default function Home02() {
                   </Link>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
