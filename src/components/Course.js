@@ -126,12 +126,12 @@ export default function Home02({
                       <Link to="/student">All Students</Link>
                     </button>
 
-                    <button
+                    {/* <button
                       id="settingsButton"
                       className={`font-bold h-full py-4 w-full hover:bg-secondary hover:text-white hover:rounded-2xl active:border-b-2 active:border-primary`}
                     >
                       Settings
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>
