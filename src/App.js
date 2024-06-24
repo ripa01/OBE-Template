@@ -10,6 +10,7 @@ import Exam from "./components/Exam";
 import Student from "./components/Student";
 import Marks from "./components/Marks";
 import Calender from "./components/Calender";
+import Result from "./components/Result";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route exact path="/student" element={<Student />} />
           <Route exact path="/marks" element={<Marks />} />
           <Route exact path="/calendar" element={<Calender />} />
+          <Route exact path="/result" element={<Result />} />
         </Routes>
       </BrowserRouter>
     </>
