@@ -20,7 +20,10 @@ export default function Home02() {
       <div className="font-poppins bg-sky-50 polkabg max-w-screen overflow-hidden min-h-screen">
         <div className="max-w-7xl mx-auto my-2 p-4">
           <div className="class">
-            <h1 className="text-3xl font-bold">Assigned Courses</h1>
+          <div className="flex justify-center items-center mb-4">
+              <h1 className="text-3xl text-primary font-bold">Assigned Courses</h1>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 my-4">
               <div className="group card text-black rounded-xl hover:-translate-y-2 transition duration-300 ease-in-out overflow-hidden">
                 <div className="h-48 bg-primary rounded-xl group border-2 border-black">
