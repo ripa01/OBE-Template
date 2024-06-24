@@ -43,11 +43,13 @@ const CreateExamModal = ({ isOpen, onClose }) => {
       overlayClassName="modal-overlay"
     >
       <div className="modal-content p-4 border-2 border-black rounded-lg bg-white">
-        <h2 className="text-2xl font-bold mb-4">Create Assessment</h2>
+      <div className="flex justify-center items-center mb-4">
+          <h1 className="text-3xl text-primary font-bold">Create Assessment</h1>
+        </div>
         <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-2 gap-4">
             <div className="col-span-2">
-              <label htmlFor="name" className="text-md">
+              <label htmlFor="name" className="text-lg font-bold">
                 Exam Name
               </label>
               <input
@@ -62,7 +64,7 @@ const CreateExamModal = ({ isOpen, onClose }) => {
               />
             </div>
             <div>
-              <label htmlFor="date" className="text-md">
+              <label htmlFor="date" className="text-lg font-bold">
                 Exam Date
               </label>
               <input
@@ -121,7 +123,7 @@ const CreateExamModal = ({ isOpen, onClose }) => {
               />
             </div> */}
             <div className="col-span-2 row-span-3">
-              <label htmlFor="instructions" className="text-md">
+              <label htmlFor="instructions" className="text-lg font-bold">
                 Exam Topic
               </label>
               <textarea
@@ -130,7 +132,7 @@ const CreateExamModal = ({ isOpen, onClose }) => {
                 value={formData.instructions}
                 onChange={handleInputChange}
                 cols="30"
-                rows="3"
+                rows="2"
                 className="w-full rounded-xl px-4 py-2 border-2 border-black text-gray-800 text-md"
                 placeholder="Enter Instructions"
               ></textarea>
@@ -140,7 +142,7 @@ const CreateExamModal = ({ isOpen, onClose }) => {
                 <div class="mt-2 flex gap-2 items-center">
                   <label
                     for="question"
-                    class="block text-sm font-medium text-gray-700"
+                    class="block text-lg font-bold "
                   >
                     Type
                   </label>
@@ -169,7 +171,7 @@ const CreateExamModal = ({ isOpen, onClose }) => {
                 <div class="mt-2 flex gap-2 items-center">
                   <label
                     for="question"
-                    class="block text-sm font-medium text-gray-700"
+                    class="block text-lg font-bold"
                   >
                     Type
                   </label>
@@ -192,26 +194,14 @@ const CreateExamModal = ({ isOpen, onClose }) => {
                 </div>
               </div>
             </div>
-            {/* <div className="col-span-2">
-              <label htmlFor="exam_file" className="text-md">
-                Instruction File
-              </label>
-              <input
-                type="file"
-                name="file"
-                id="exam_file"
-                accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
-                onChange={handleInputChange}
-                className="w-full rounded-xl px-4 py-2 border-2 border-black text-gray-800 text-md bg-white"
-              />
-            </div> */}
+           
           </div>
           <input type="hidden" name="class_code" value="{class.code}" />
           <input type="hidden" name="action" value="create_exam" />
           <div className="col-span-2 mt-4">
             <button
               type="submit"
-              className="w-full py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-md"
+              className="w-full py-2 bg-primary hover:bg-blue-600 text-white rounded-lg text-md"
             >
               <Link to="/exam">Create Exam</Link>
             </button>
