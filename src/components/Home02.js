@@ -21,7 +21,7 @@ export default function Home02() {
         <div className="max-w-7xl mx-auto my-2 p-4">
           <div className="class">
           <div className="flex justify-center items-center mb-4">
-              <h1 className="text-3xl text-primary font-bold">Assigned Courses</h1>
+              <h1 className="text-3xl text-primary font-bold">Courses List</h1>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 my-4">

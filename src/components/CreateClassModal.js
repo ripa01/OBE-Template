@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 import "../App.css";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 Modal.setAppElement("#root");
 
@@ -91,7 +91,7 @@ const CreateClassModal = ({ isOpen, onClose }) => {
               type="submit"
               className="w-full py-2 bg-primary hover:bg-blue-600 text-white rounded-lg text-md font-bold"
             >
-              Create Course
+             <Link to="/course">Create Course</Link> 
             </button>
           </div>
         </form>
