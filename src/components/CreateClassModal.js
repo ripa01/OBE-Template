@@ -89,7 +89,7 @@ const CreateClassModal = ({ isOpen, onClose }) => {
           <div className="col-span-2 mt-4">
             <button
               type="submit"
-              className="w-full py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-md font-bold"
+              className="w-full py-2 bg-primary hover:bg-blue-600 text-white rounded-lg text-md font-bold"
             >
               Create Course
             </button>
