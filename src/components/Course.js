@@ -1,18 +1,17 @@
 import React, { useState } from "react";
 import CreateExamModal from "./CreateExamModal";
+import { Link } from "react-router-dom";
+
 
 const defaultClass = {
-  name: "Sample Class",
-  description: "This is a sample description.",
+  name: "Machine Learning",
+  description: "This is Machine Learning course for 4th year 1st semester.",
   teacher: {
     first_name: "John",
     last_name: "Doe",
     username: "johndoe",
     email: "johndoe@example.com",
-    color: {
-      primary: "blue-500",
-      secondary: "blue-700",
-    },
+  
     status: true,
   },
   exams: [
@@ -21,9 +20,7 @@ const defaultClass = {
       name: "Sample Exam 1",
       date: "2024-07-01",
       start_time: "10:00 AM",
-      classes: {
-        name: "Sample Class",
-      },
+     
     },
     {
       id: 2,
@@ -68,11 +65,13 @@ export default function Home02({
   };
 
   return (
+    <>
+  
     <div className="max-w-7xl mx-4 lg:mx-auto">
       {joined ? (
         <div>
           <div
-            className={`mt-4 bg-${classData.teacher.color.primary} px-8 pt-24 pb-8 rounded-2xl border-2 border-black`}
+            className={`mt-4 bg-primary px-8 pt-24 pb-8 rounded-2xl border-2 border-black`}
           >
             <div className="opacity-100">
               <h1 className="text-5xl font-bold">{classData.name}</h1>
@@ -82,10 +81,10 @@ export default function Home02({
                   {classData.description}
                 </h2>
               )}
-              <h2 className="mt-2">
+              {/* <h2 className="mt-2">
                 <span className="font-bold">Class Code: </span>
                 {classData.code}
-              </h2>
+              </h2> */}
             </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-0 lg:gap-4 py-4">
@@ -113,19 +112,20 @@ export default function Home02({
                 <div className="flex items-center justify-around">
                   <button
                     id="examButton"
-                    className={`font-bold h-full py-4 w-full hover:bg-${classData.teacher.color.secondary} hover:text-white hover:rounded-2xl active:border-b-2 active:border-primary bg-violet-100 text-gray-900 border-b-2 border-primary rounded-t`}
+                    className={`font-bold h-full py-4 w-full hover:bg-secondary hover:text-white hover:rounded-2xl active:border-b-2 active:border-primary bg-violet-100 text-gray-900 border-b-2 border-primary rounded-t`}
                   >
-                    Assesment 
+                    Assessments 
                   </button>
                   <button
-                    id="peopleButton"
-                    className={`font-bold h-full py-4 w-full hover:bg-${classData.teacher.color.secondary} hover:text-white hover:rounded-2xl active:border-b-2 active:border-primary`}
-                  >
-                    People
-                  </button>
+  id="peopleButton"
+  className={`font-bold h-full py-4 w-full hover:bg-secondary hover:text-white hover:rounded-2xl active:border-b-2 active:border-primary`}
+>
+  <Link to="/student">All Students</Link>
+</button>
+
                   <button
                     id="settingsButton"
-                    className={`font-bold h-full py-4 w-full hover:bg-${classData.teacher.color.secondary} hover:text-white hover:rounded-2xl active:border-b-2 active:border-primary`}
+                    className={`font-bold h-full py-4 w-full hover:bg-secondary hover:text-white hover:rounded-2xl active:border-b-2 active:border-primary`}
                   >
                     Settings
                   </button>
@@ -134,17 +134,17 @@ export default function Home02({
             </div>
             <div id="examPage" className="block col-span-3">
               <div className="my-2 bg-white rounded-2xl shadow-xl p-4 border-2 border-black">
-                <h1 className="text-3xl font-bold">All Assesment</h1>
+                <h1 className="text-3xl font-bold">All Assesments</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 font-bold">
                   {classData.teacher.status && (
-                    <div className="group card text-white rounded-xl hover:-translate-y-2 transition duration-300 ease-in-out overflow-hidden">
+                    <div className="group card text-black rounded-xl hover:-translate-y-2 transition duration-300 ease-in-out overflow-hidden">
                       <div
-                        className={`h-48 bg-${classData.teacher.color.primary} rounded-xl group border-2 border-black`}
+                        className={`h-48 bg-primary rounded-xl group border-2 border-black`}
                       >
                         <button className="w-full h-full" onClick={openModal}>
                           <div className="h-full flex items-center justify-center">
                             <span
-                              className={`flex flex-col h-12 w-12 rounded-full bg-${classData.teacher.color.secondary} p-4 text-2xl font-bold text-white flex items-center justify-center group-hover:w-full group-hover:h-full group-hover:rounded-xl transition-all duration-100`}
+                              className={`flex flex-col h-12 w-12 rounded-full bg-secondary p-4 text-2xl font-bold text-black flex items-center justify-center group-hover:w-full group-hover:h-full group-hover:rounded-xl transition-all duration-100`}
                             >
                               +
                               <span className="hidden group-hover:block text-xl">
@@ -160,14 +160,12 @@ export default function Home02({
                     classData.exams.map((exam) => (
                       <div
                         key={exam.id}
-                        className={`upcomingExamCard group card text-black rounded-xl bg-${classData.teacher.color.primary} hover:bg-${classData.teacher.color.secondary} hover:-translate-y-2 transition duration-300 ease-in-out overflow-hidden border-2 border-black`}
+                        className={`upcomingExamCard group card text-black rounded-xl bg-primary hover:bg-secondary hover:-translate-y-2 transition duration-300 ease-in-out overflow-hidden border-2 border-black`}
                       >
                         <a href="/">
                           <div className="flex flex-col p-4 h-48 w-full truncate">
                             <div>
-                              <span className="max-w-full bg-white text-black px-2 rounded-2xl text-left text-sm">
-                                {exam.classes.name}
-                              </span>
+                              
                             </div>
                             <div className="w-full mt-auto">
                               <h1 className="mt-2 text-black text-2xl font-bold capitalize">
@@ -204,84 +202,6 @@ export default function Home02({
                 </div>
               </div>
             </div>
-            <div id="peoplePage" className="hidden col-span-3">
-              <div className="bg-white rounded-2xl shadow-xl p-4 border-2 border-black">
-                <h1 className="text-3xl font-bold">People</h1>
-                <div className="flex items-center justify-center">
-                  <button
-                    id="allPeopleButton"
-                    className="font-bold h-full py-4 w-full hover:bg-violet-300 hover:rounded-2xl active:border-b-2 active:border-primary"
-                  >
-                    All
-                  </button>
-                  <button
-                    id="studentsButton"
-                    className="font-bold h-full py-4 w-full hover:bg-violet-300 hover:rounded-2xl active:border-b-2 active:border-primary"
-                  >
-                    Students
-                  </button>
-                  <button
-                    id="teachersButton"
-                    className="font-bold h-full py-4 w-full hover:bg-violet-300 hover:rounded-2xl active:border-b-2 active:border-primary"
-                  >
-                    Teachers
-                  </button>
-                </div>
-                <div id="allPeople" className="hidden">
-                  <div className="text-lg font-bold mt-2">
-                    {classData.students.map((student, index) => (
-                      <p key={index}>
-                        {student.first_name} {student.last_name}
-                      </p>
-                    ))}
-                  </div>
-                  <div className="text-lg font-bold mt-2">
-                    <p>
-                      {classData.teacher.first_name} {classData.teacher.last_name}
-                    </p>
-                  </div>
-                </div>
-                <div id="students" className="hidden">
-                  <div className="text-lg font-bold mt-2">
-                    {classData.students.map((student, index) => (
-                      <p key={index}>
-                        {student.first_name} {student.last_name}
-                      </p>
-                    ))}
-                  </div>
-                </div>
-                <div id="teachers" className="hidden">
-                  <div className="text-lg font-bold mt-2">
-                    <p>
-                      {classData.teacher.first_name} {classData.teacher.last_name}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="settingsPage" className="hidden col-span-3">
-              <div className="bg-white rounded-2xl shadow-xl p-4 border-2 border-black">
-                <h1 className="text-3xl font-bold">Settings</h1>
-                <div className="grid grid-cols-2 gap-4 mt-4">
-                  <div className="bg-violet-200 p-4 rounded-xl shadow-lg text-center">
-                    <h2 className="font-bold">Setting 1</h2>
-                    <p>Description for setting 1</p>
-                  </div>
-                  <div className="bg-violet-200 p-4 rounded-xl shadow-lg text-center">
-                    <h2 className="font-bold">Setting 2</h2>
-                    <p>Description for setting 2</p>
-                  </div>
-                  <div className="bg-violet-200 p-4 rounded-xl shadow-lg text-center">
-                    <h2 className="font-bold">Setting 3</h2>
-                    <p>Description for setting 3</p>
-                  </div>
-                  <div className="bg-violet-200 p-4 rounded-xl shadow-lg text-center">
-                    <h2 className="font-bold">Setting 4</h2>
-                    <p>Description for setting 4</p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
           <CreateExamModal isOpen={isModalOpen} onClose={closeModal} />
         </div>
@@ -292,5 +212,6 @@ export default function Home02({
         </div>
       )}
     </div>
+    </>
   );
 }

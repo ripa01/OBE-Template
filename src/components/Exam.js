@@ -3,9 +3,9 @@ import SubjectiveQuestionModal from './SubjectiveQuestionModal';
 
 const Exam = () => {
   // Default values
-  const examName = "Sample Exam";
+  const examName = "CT 01";
   const classDetails = {
-    name: "Sample Class",
+    name: "Machine learning First CT",
     date: "2.04.24"
   };
   const totalQuestions = 10; // Example value

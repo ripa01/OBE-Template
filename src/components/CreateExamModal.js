@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
-import "../App.css"; 
-import { Link } from 'react-router-dom';
+import "../App.css";
+import { Link } from "react-router-dom";
 
 Modal.setAppElement("#root");
 
@@ -43,7 +43,7 @@ const CreateExamModal = ({ isOpen, onClose }) => {
       overlayClassName="modal-overlay"
     >
       <div className="modal-content p-4 border-2 border-black rounded-lg bg-white">
-        <h2 className="text-2xl font-bold mb-4">Create Exam</h2>
+        <h2 className="text-2xl font-bold mb-4">Create Assessment</h2>
         <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-2 gap-4">
             <div className="col-span-2">
@@ -122,7 +122,7 @@ const CreateExamModal = ({ isOpen, onClose }) => {
             </div> */}
             <div className="col-span-2 row-span-3">
               <label htmlFor="instructions" className="text-md">
-                Topic
+                Exam Topic
               </label>
               <textarea
                 name="instructions"
@@ -130,10 +130,67 @@ const CreateExamModal = ({ isOpen, onClose }) => {
                 value={formData.instructions}
                 onChange={handleInputChange}
                 cols="30"
-                rows="5"
+                rows="3"
                 className="w-full rounded-xl px-4 py-2 border-2 border-black text-gray-800 text-md"
                 placeholder="Enter Instructions"
               ></textarea>
+            </div>
+            <div className="col-span-2 row-span-3">
+              <div id="mcqblock">
+                <div class="mt-2 flex justify-between items-center">
+                  <label
+                    for="question"
+                    class="block text-sm font-medium text-gray-700"
+                  >
+                    Type
+                  </label>
+                  <div class="flex items-center justify-between gap-2">
+                    <input
+                      type="radio"
+                      name="optioniscorrect"
+                      id="option{{i}}iscorrect"
+                      value="{{i}}"
+                      class="shadow-sm px-2 h-4 w-4 active:ring-blue-500 focus:ring-blue-500 border border-gray-300 focus:border-blue-500 block sm:text-sm border-gray-300 rounded-md"
+                    />
+                    <input
+                      type="text"
+                      name="option{{i}}"
+                      id="option{{i}}"
+                      class="optioniscorrect shadow-sm p-2 w-72 focus:ring-blue-500 border border-gray-300 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                      placeholder="Mendetory"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-span-2 row-span-3">
+              <div id="mcqblock">
+                <div class="mt-2 flex justify-between items-center">
+                  <label
+                    for="question"
+                    class="block text-sm font-medium text-gray-700"
+                  >
+                    Type
+                  </label>
+                  <div class="flex items-center justify-between gap-2">
+                    <input
+                      type="radio"
+                      name="optioniscorrect"
+                      id="option{{i}}iscorrect"
+                      value="{{i}}"
+                      class="shadow-sm px-2 h-4 w-4 active:ring-blue-500 focus:ring-blue-500 border border-gray-300 focus:border-blue-500 block sm:text-sm border-gray-300 rounded-md"
+                    />
+                    <input
+                      type="text"
+                      name="option{{i}}"
+                      id="option{{i}}"
+                      class="optioniscorrect shadow-sm p-2 w-72 focus:ring-blue-500 border border-gray-300 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                      placeholder="Optional"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
             {/* <div className="col-span-2">
               <label htmlFor="exam_file" className="text-md">
@@ -152,13 +209,11 @@ const CreateExamModal = ({ isOpen, onClose }) => {
           <input type="hidden" name="class_code" value="{class.code}" />
           <input type="hidden" name="action" value="create_exam" />
           <div className="col-span-2 mt-4">
-        <button
-            
+            <button
               type="submit"
-
               className="w-full py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-md"
             >
-             <Link to="/exam">Create Exam</Link> 
+              <Link to="/exam">Create Exam</Link>
             </button>
           </div>
         </form>
