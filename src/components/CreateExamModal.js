@@ -137,7 +137,7 @@ const CreateExamModal = ({ isOpen, onClose }) => {
             </div>
             <div className="col-span-2 row-span-3">
               <div id="mcqblock">
-                <div class="mt-2 flex justify-between items-center">
+                <div class="mt-2 flex gap-2 items-center">
                   <label
                     for="question"
                     class="block text-sm font-medium text-gray-700"
@@ -166,7 +166,7 @@ const CreateExamModal = ({ isOpen, onClose }) => {
 
             <div className="col-span-2 row-span-3">
               <div id="mcqblock">
-                <div class="mt-2 flex justify-between items-center">
+                <div class="mt-2 flex gap-2 items-center">
                   <label
                     for="question"
                     class="block text-sm font-medium text-gray-700"

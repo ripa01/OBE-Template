@@ -33,7 +33,7 @@ export default function Student() {
           <button
             className="bg-primary text-white font-bold py-2 px-4 rounded-md hover:bg-secondary"
           >
-            Edit
+            Assign Mark
           </button>
         </div>
        
@@ -70,7 +70,7 @@ export default function Student() {
                 </td>
                 
                 <td class="px-6 py-4">
-                    <Link to="/marks" class="font-medium text-white hover:underline">Edit</Link>
+                    <Link to="/marks" class="font-medium text-white hover:underline">Assign Mark</Link>
                 </td>
             </tr>
             <tr class="bg-indigo-600 border-b border-blue-400">
@@ -85,7 +85,7 @@ export default function Student() {
                 </td>
                 
                 <td class="px-6 py-4">
-                    <a href="/" class="font-medium text-white hover:underline">Edit</a>
+                    <a href="/" class="font-medium text-white hover:underline">Assign Mark</a>
                 </td>
             </tr>
             <tr class="bg-indigo-500 border-b border-blue-400">
@@ -100,7 +100,7 @@ export default function Student() {
                 </td>
                 
                 <td class="px-6 py-4">
-                    <a href="/" class="font-medium text-white hover:underline">Edit</a>
+                    <a href="/" class="font-medium text-white hover:underline">Assign Mark</a>
                 </td>
             </tr>
             <tr class="bg-indigo-600 border-b border-blue-400">
@@ -115,7 +115,7 @@ export default function Student() {
                 </td>
                 
                 <td class="px-6 py-4">
-                    <a href="/" class="font-medium text-white hover:underline">Edit</a>
+                    <a href="/" class="font-medium text-white hover:underline">Assign Mark</a>
                 </td>
             </tr>
             <tr class="bg-indigo-500 border-b border-blue-400">
@@ -130,7 +130,7 @@ export default function Student() {
                 </td>
                 
                 <td class="px-6 py-4">
-                    <a href="/" class="font-medium text-white hover:underline">Edit</a>
+                    <a href="/" class="font-medium text-white hover:underline">Assign Mark</a>
                 </td>
             </tr>
         </tbody>

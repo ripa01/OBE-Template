@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CreateExamModal from "./CreateExamModal";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar"
 
 
 const defaultClass = {
@@ -17,6 +18,7 @@ const defaultClass = {
   exams: [
     {
       id: 1,
+      type:"Mendetory",
       name: "Sample Exam 1",
       date: "2024-07-01",
       start_time: "10:00 AM",
@@ -24,6 +26,7 @@ const defaultClass = {
     },
     {
       id: 2,
+      type:"Optional",
       name: "Sample Exam 2",
       date: "2024-07-15",
       start_time: "02:00 PM",
@@ -66,6 +69,7 @@ export default function Home02({
 
   return (
     <>
+    <Navbar />
   
     <div className="max-w-7xl mx-4 lg:mx-auto">
       {joined ? (
@@ -163,9 +167,9 @@ export default function Home02({
                         className={`upcomingExamCard group card text-black rounded-xl bg-primary hover:bg-secondary hover:-translate-y-2 transition duration-300 ease-in-out overflow-hidden border-2 border-black`}
                       >
                         <a href="/">
-                          <div className="flex flex-col p-4 h-48 w-full truncate">
+                          <div className="flex flex-col p-4 h-48 w-full text-white truncate">
                             <div>
-                              
+                              {exam.type}
                             </div>
                             <div className="w-full mt-auto">
                               <h1 className="mt-2 text-black text-2xl font-bold capitalize">
