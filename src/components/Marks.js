@@ -1,13 +1,19 @@
 import React from "react";
+import Navbar from "./Navbar";
 
 export default function Marks() {
   return (
+    <>
+    <Navbar />
     <div className="max-w-7xl mx-auto my-2 p-4">
-      <div className="card bg-primary w-full rounded-xl text-white font-bold border-2 border-black">
-        <div className="px-8 pt-16 pb-8">
-          <h1 className="text-3xl font-bold">Course Code - CSE 401</h1>
-          <p className="text-md mt-2 text-gray-200">
+      <div className="card bg-indigo-100 w-full rounded-xl text-black font-bold border-2 border-black">
+        <div className="px-8  justify-center items-center pt-16 pb-8">
+          <h1 className="text-3xl font-bold">Assessment- CT 01</h1>
+          <p className="text-md mt-2 text-black">
             Course Title - Machine Learning
+          </p>
+          <p className="text-md mt-2 text-black">
+            Course Code - CSE 301
           </p>
         </div>
       </div>
@@ -21,7 +27,7 @@ export default function Marks() {
         </div> */}
 
       <div className=" mt-10 border-2 border-black rounded-lg bg-white">
-        <div className="flex  items-end justify-center p-4 text-center sm:items-center sm:p-0">
+        <div className="flex  items-end justify-center p-3  text-center sm:items-center sm:p-0">
           <div className="relative transform overflow-hidden rounded-xl bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
             <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
               <form method="POST">
@@ -42,32 +48,31 @@ export default function Marks() {
                         >
                           Student ID
                         </label>
-                        <textarea
+                        <text
                           name="subjectiveanswer"
                           id="subjectiveanswer"
                           className="shadow-sm p-2 h-10 w-72 focus:ring-blue-500 border border-gray-300 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                          placeholder="20201001"
-                        ></textarea>
+                         
+                        > 20201001 </text>
                       </div>
                     </div>
                     <div id="subjectiveblock">
-                      <div class="mt-2 flex justify-between items-center">
+                      <div className="mt-2 flex justify-between items-center">
                         <label
-                          for="mark"
-                          class="block text-sm font-medium text-gray-700"
+                          htmlFor="subjectiveanswer"
+                          className="block text-sm mr-5 font-medium text-gray-700"
                         >
                           Student Name
                         </label>
-                        <input
-                          name="mark"
-                          id="mark"
-                          type="number"
-                          class="shadow-sm p-2 w-72 focus:ring-blue-500 border border-gray-300 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                          placeholder="ABC"
-                          min="0"
-                        />
+                        <text
+                          name="subjectiveanswer"
+                          id="subjectiveanswer"
+                          className="shadow-sm p-2 h-10 w-72 focus:ring-blue-500 border border-gray-300 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                         
+                        > ABC </text>
                       </div>
                     </div>
+                    
                     <div id="subjectiveblock">
                       <div class="mt-2 flex justify-between items-center">
                         <label
@@ -195,7 +200,7 @@ export default function Marks() {
                     <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                       <button
                         type="submit"
-                        className="inline-flex w-full justify-center rounded-md border border-transparent bg-violet-600 px-8 py-2 text-base font-medium text-white shadow-sm hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+                        className="inline-flex w-full justify-center rounded-md border border-transparent bg-primary px-8 py-2 text-base font-medium text-white shadow-sm hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
                       >
                         Save
                       </button>
@@ -220,5 +225,6 @@ export default function Marks() {
         </div>
       </div>
     </div>
+    </>
   );
 }
