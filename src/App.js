@@ -8,7 +8,7 @@ import Login from "./components/Login";
 import Course from "./components/Course";
 import Exam from "./components/Exam";
 import Student from "./components/Student";
-import Marks from "./components/Marks";
+import Marks02 from "./components/Marks02";
 import Calender from "./components/Calender";
 import Result from "./components/Result";
 
@@ -24,7 +24,7 @@ function App() {
           <Route exact path="/course" element={<Course />} />
           <Route exact path="/exam" element={<Exam />} />
           <Route exact path="/student" element={<Student />} />
-          <Route exact path="/marks" element={<Marks />} />
+          <Route exact path="/marks" element={<Marks02 />} />
           <Route exact path="/calendar" element={<Calender />} />
           <Route exact path="/result" element={<Result />} />
         </Routes>
